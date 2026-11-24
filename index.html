@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111419">
+    <meta name="description" content="Entre em quadra e participe do leilão de Haikyuu!">
+    <title>Karasuno Club — Leilão Haikyuu!!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="visual-panel" aria-label="Leilão de Haikyuu">
+        <div class="visual-wash"></div>
+        <header class="brand">
+          <span class="brand-mark" aria-hidden="true">K</span>
+          <span>KARASUNO<span class="brand-sub">CLUB</span></span>
+        </header>
+
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> O LEILÃO COMEÇA AQUI</p>
+          <h1>ENTRE EM<br>QUADRA.</h1>
+          <p class="hero-description">Reúna sua equipe, encontre seus personagens favoritos e dê o próximo lance.</p>
+        </div>
+
+        <div class="visual-footer">
+          <span class="volley-icon" aria-hidden="true">✦</span>
+          <span>VAMOS, KARASUNO!</span>
+          <span class="footer-rule"></span>
+          <span class="footer-number">01 / 03</span>
+        </div>
+      </section>
+
+      <section class="form-panel">
+        <div class="form-wrap">
+          <div class="mobile-brand">
+            <span class="brand-mark" aria-hidden="true">K</span>
+            <span>KARASUNO<span class="brand-sub">CLUB</span></span>
+          </div>
+
+          <div id="auth-view">
+            <p class="eyebrow form-eyebrow">SEU PRÓXIMO PONTO COMEÇA AQUI</p>
+            <h2 id="form-title">Que bom ter você<br><span>de volta.</span></h2>
+            <p class="form-intro" id="form-intro">Entre na sua conta para acompanhar os lances.</p>
+
+            <div class="auth-switch" role="group" aria-label="Tipo de acesso">
+              <button class="switch-button is-active" id="login-tab" type="button" aria-pressed="true">Entrar</button>
+              <button class="switch-button" id="signup-tab" type="button" aria-pressed="false">Criar conta</button>
+            </div>
+
+            <form id="login-form" class="auth-form">
+              <label for="login-email">E-mail</label>
+              <input id="login-email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required>
+              <label for="login-password">Senha</label>
+              <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Sua senha" required>
+              <button class="submit-button" type="submit">Entrar na quadra <span aria-hidden="true">↗</span></button>
+            </form>
+
+            <form id="signup-form" class="auth-form" hidden>
+              <label for="signup-name">Como podemos te chamar?</label>
+              <input id="signup-name" name="name" type="text" autocomplete="name" placeholder="Seu nome" minlength="2" maxlength="60" required>
+              <label for="signup-email">E-mail</label>
+              <input id="signup-email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required>
+              <label for="signup-password">Crie uma senha</label>
+              <input id="signup-password" name="password" type="password" autocomplete="new-password" placeholder="Pelo menos 6 caracteres" minlength="6" required>
+              <button class="submit-button" type="submit">Criar minha conta <span aria-hidden="true">↗</span></button>
+            </form>
+
+            <p id="auth-message" class="auth-message" role="status" aria-live="polite"></p>
+            <p class="privacy-note"><span aria-hidden="true">◆</span> Sua conta fica disponível em qualquer aparelho.</p>
+          </div>
+
+          <div id="account-view" class="account-view" hidden>
+            <p class="eyebrow form-eyebrow">ACESSO CONFIRMADO</p>
+            <h2>Bem-vindo à<br><span>quadra.</span></h2>
+            <p class="form-intro">Sua conta está pronta para o próximo lance.</p>
+            <div class="account-card">
+              <span class="account-avatar" aria-hidden="true">K</span>
+              <div>
+                <strong id="account-name"></strong>
+                <span id="account-email"></span>
+              </div>
+            </div>
+            <button id="logout-button" class="secondary-button" type="button">Sair da conta</button>
+            <p id="account-message" class="auth-message" role="status" aria-live="polite"></p>
+          </div>
+
+          <footer class="form-footer">
+            <span>FEITO PARA QUEM AMA O JOGO</span>
+            <span>HAIKYUU!! FAN PROJECT</span>
+          </footer>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
